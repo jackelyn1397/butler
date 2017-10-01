@@ -1,5 +1,8 @@
 Template.RequestService.onCreated(function() {
 	var self = this;
+    self.autorun(function() {
+		self.subscribe('keywords');
+	});
 });
 
 Template.RequestService.events({
@@ -25,8 +28,15 @@ Template.RequestService.events({
           var keywords = data.documents[0].keyPhrases
           document.getElementById("keywords").innerHTML = "Keywords found: "+keywords;
           for(var i = 0; i<keywords.length; i++){
-            
+            var existing = Keywords.findOne({keyword: keywords[i]});
+            if (!existing) {
+                Meteor.call("newKeyword", keywords[i], 1);
+            }
+            else{
+              Meteor.call("increaseKeywordFrequency", keywords[i]);
+            }
           }
+          console.log(Keywords.find({}).fetch());
   
       })
       .fail(function() {
