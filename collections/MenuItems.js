@@ -34,23 +34,23 @@ MenuItemSchema = new SimpleSchema({
 
 Meteor.methods({
 	newMenuItem: function(name, category, price, current){
-        if(!MenuItems.findOne({loyaltyNumber: loyaltyNumber})){
+        if(!MenuItems.findOne({name: name})){
 			MenuItems.insert({name: name,
                             category: category,
                             price: price,
                             current: current});
+			console.log(MenuItems.find({}).fetch());
 		}
 	},
-	editMenuItem: function(name, category, price, current){
-		Customers.update({
+	editMenuItem: function(name, current){
+		MenuItems.update({
 			name: name
 		}, {
 			$set: {
-				category: category,
-                price: price,
-                current: current,
+                current: current
 			}
 		});
+		//console.log(MenuItems.find({}).fetch());
 	},
 });
 

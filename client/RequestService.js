@@ -7,7 +7,7 @@ Template.RequestService.onCreated(function() {
 
 Template.RequestService.events({
   'click .send' : function () {
-      var message = document.getElementById('text').value;;
+      var message = document.getElementById('text').value;
       var params = {
           // Request parameters
       };

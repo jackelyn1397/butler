@@ -1,0 +1,36 @@
+<template name="EditMenu">
+  <div>
+    <h4>Add Menu Item</h4>
+    <p>
+        <form>
+            Name:<br>
+            <input id="name"><br>
+        </form>
+    </p>
+    <p>
+        <form>
+            Category:<br>
+            <input id="category"><br>
+        </form>
+    </p>
+    <p>
+        <form>
+            Price:<br>
+            <input id="price"><br>
+        </form>
+    </p>
+    <button class="submit-add">Submit</button>
+  </div>
+  <div>
+    <h4>Edit Today's Menu</h4>
+    <div id="items-list">
+        {{#each listItems}}
+            <p><input type="checkbox" id="{{name}}">{{name}}</p>
+        {{/each}}
+    </div>
+    <button class="submit-edit">Submit</button>
+  </div>
+  <div>
+    <button class="back">Back</button>
+  </div>
+</template>
