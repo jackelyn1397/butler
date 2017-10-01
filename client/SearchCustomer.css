@@ -1,2 +1,71 @@
-#searchCustomer {background-image: url("https://user-images.githubusercontent.com/10893413/31052370-90e80aa6-a650-11e7-9f6f-ee667b78b897.png");}
-#searchCustomer {background-repeat: no-repeat;}
+#background {background-image: url("https://user-images.githubusercontent.com/10893413/31052670-919c66d2-a659-11e7-8925-2de4130f7bdf.png");}
+body {
+    background-image: url("guestinfo.png");
+    background-repeat: no-repeat;
+    font-family: "Avenir Book", Avenir, sans-serif;
+    font-weight: 100;
+    font-size: 28px;
+    color: white;
+  }
+  p    {
+    color: white;
+    font-family: "Avenir Book", Avenir, sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+  }
+  button {
+    border: 2px solid white;
+    border-radius: 10px;
+    background: none;
+    color: white;
+    font-weight: 100;
+    font-family: "Avenir Book", Avenir, sans-serif;
+    font-size: 28px;
+    padding: 8px;
+  }
+  button:hover {
+    background-color: rgba(255,255,255,0.5);
+  }
+  input {
+    border-bottom: 2px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: none;
+    color: white;
+    font-weight: 100;
+    font-family: "Avenir Book", Avenir, sans-serif;
+    font-size: 28px;
+  }
+  input:focus { outline: none; }
+  #searchNumber {
+    margin: 0 auto;
+    width: 750px;
+    padding-top: 350px;
+  }
+  #results{
+    left: 345px;
+    top: 0px;
+    width: 750px;
+    padding-top: 362px;
+    z-index: 10;
+    position: absolute;
+    display: block;
+  }
+  #customerName {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 8px;
+  }
+  #entreeRec {
+    font-weight: bold;
+  }
+  #drinkRec {
+    font-weight: bold;
+  }
+  #entreeRec{
+    color: #FFDCB3;
+  }
+  #drinkRec {
+    color: #FFDCB3;
+  }

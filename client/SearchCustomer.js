@@ -5,6 +5,7 @@ Template.SearchCustomer.onCreated(function() {
         self.subscribe('menuitems')
 	});
     $("#results").hide();
+    $('body').css('background-image','url(https://user-images.githubusercontent.com/10893413/31052670-919c66d2-a659-11e7-8925-2de4130f7bdf.png)');
 });
 
 Template.SearchCustomer.events({
@@ -28,34 +29,36 @@ Template.SearchCustomer.events({
         if (document.getElementById('name')==null) {
             return;
         }
+        $('body').css('background-image','url(https://user-images.githubusercontent.com/10893413/31052683-d4bb9492-a659-11e7-9d6a-8d1494025999.png)');
+        $('#searchNumber').hide();
         if (document.getElementById('name').value=="Jenny Wang") {
             $("#customerName").html("Jenny Wang");
-            $("#entreeCategory").html("seafood");
-            $("#drinkCategory").html("wine");
-            $("#entreePrice").html("200");
-            $("#drinkPrice").html("100");
-            $("#entreeRec").html("Salmon");
-            $("#drinkRec").html("Merlot");
+            $("#entreeCategory").html("Favorite Entree: Seafood");
+            $("#drinkCategory").html("Favorite Beverage: Wine");
+            $("#entreePrice").html("Entree Price Limit: 200");
+            $("#drinkPrice").html("Beverage Price Limit: 100");
+            $("#entreeRec").html("Entree Recommendation: Salmon");
+            $("#drinkRec").html("Beverage Recommendation: Merlot");
         }
         else if (document.getElementById('name').value=="Elaine Liu") {
-            $("#customerName").html("Elaine Liu");
-            $("#entreeCategory").html("salad");             
-            $("#drinkCategory").html("beer");
-            $("#entreePrice").html("100");
-            $("#drinkPrice").html("30");
-            $("#entreeRec").html("Caesar Salad");
-            $("#drinkRec").html("Corona");
+            $("#customerName").html("Name: Elaine Liu");
+            $("#entreeCategory").html("Favorite Entree: Salad");             
+            $("#drinkCategory").html("Favorite Beverage: Beer");
+            $("#entreePrice").html("Entree Price Limit: 100");
+            $("#drinkPrice").html("Beverage Price Limit: 30");
+            $("#entreeRec").html("Entree Recommendation: Caesar Salad");
+            $("#drinkRec").html("Beverage Recommendation: Corona");
         }
         else{
-            $("#customerName").html("soup");
-            $("#customerName").html(document.getElementById('name').value);
-            $("#entreeCategory").html("soup");
-            $("#drinkCategory").html("champagne");
-            $("#entreePrice").html("150");
-            $("#drinkPrice").html("70");
-            $("#entreeRec").html("Minestrone Soup");
-            $("#drinkRec").html("Dom Perignon");
+            $("#customerName").html("Name: "+document.getElementById('name').value);
+            $("#entreeCategory").html("Favorite Entree: Soup");
+            $("#drinkCategory").html("Favorite Beverage: Champagne");
+            $("#entreePrice").html("Entree Price Limit: 150");
+            $("#drinkPrice").html("Beverage price Limit: 70");
+            $("#entreeRec").html("Entree Recommendation: Minestrone Soup");
+            $("#drinkRec").html("Beverage Recommendation: Dom Perignon");
         }
+        
         
       }
 });
